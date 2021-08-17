@@ -7,7 +7,6 @@ import com.nicolas.pricecoins.domain.entities.CoinUSD
 class RemoteDataSourceImpl(private val service: ServiceApi) : RemoteDataSource {
 
     override suspend fun fetchPrice(): CoinUSD {
-        val response = service.fetchPriceCoins()
-        return response.toEntity()
+        return service.fetchPriceCoins().toEntity()
     }
 }

@@ -7,5 +7,4 @@ interface PriceRepository {
 
     suspend fun fetchCoinUsd(): DataState<CoinUSD>
 
-
 }

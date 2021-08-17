@@ -1,8 +1,9 @@
-package com.nicolas.pricecoins.presenter
+package com.nicolas.pricecoins.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.nicolas.pricecoins.databinding.ActivityMainBinding
+import com.nicolas.pricecoins.extensions.setIsVisible
 import com.nicolas.pricecoins.extensions.showToast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // Adicionando novo comentário.
+    // NOva linha
+
     private fun priceCoinInit() {
 
         viewModel.run {
@@ -27,9 +31,25 @@ class MainActivity : AppCompatActivity() {
                 binding.tvNameCoin.text = result.coinName
             })
 
+            viewModel.isLoading.observe(this@MainActivity, { visible ->
+                handleVisibility(visible)
+            })
+
             observerError.observe(this@MainActivity, { error ->
                 showToast(error)
             })
         }
+    }
+
+    private fun add(){
+
+    }
+
+    private fun two(){
+
+    }
+
+    private fun handleVisibility(visible: Boolean) {
+        binding.progressBar.setIsVisible(visible)
     }
 }
