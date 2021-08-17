@@ -1,4 +1,4 @@
-package com.nicolas.pricecoins.presenter
+package com.nicolas.pricecoins.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,6 +17,9 @@ class MainViewModel(private val getPriceUsdUseCase: GetPriceUsdUseCase) : ViewMo
     private val _observerError = MutableLiveData<String>()
     val observerError: LiveData<String> = _observerError
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
+
     init {
         fetchCoin()
     }
@@ -24,7 +27,11 @@ class MainViewModel(private val getPriceUsdUseCase: GetPriceUsdUseCase) : ViewMo
     private fun fetchCoin() {
         viewModelScope.launch {
             when (val result = getPriceUsdUseCase.execute()) {
+                is DataState.Loading -> {
+                    _isLoading.postValue(true)
+                }
                 is DataState.Success -> {
+                    _isLoading.postValue(false)
                     result.result.let {
                         _fetchPriceUsd.postValue(it)
                     }

@@ -7,7 +7,7 @@ import com.nicolas.pricecoins.domain.PriceRepository
 import com.nicolas.pricecoins.domain.PriceRepositoryImpl
 import com.nicolas.pricecoins.domain.usecase.GetPriceUsdUseCase
 import com.nicolas.pricecoins.extensions.Constants
-import com.nicolas.pricecoins.presenter.MainViewModel
+import com.nicolas.pricecoins.presentation.MainViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
