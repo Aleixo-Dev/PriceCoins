@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Adicionando novo comentário.
-    // NOva linhas
+    // NOva linha
 
     private fun priceCoinInit() {
 
