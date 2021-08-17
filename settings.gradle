@@ -1,2 +1,3 @@
 rootProject.name = "PriceCoins"
 include ':app'
+include ':app:module_app'
