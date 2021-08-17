@@ -2,3 +2,4 @@ rootProject.name = "PriceCoins"
 include ':app'
 include ':app:module_app'
 include ':teste'
+include ':origin_module'
