@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun two(){
+
+    }
+
     private fun handleVisibility(visible: Boolean) {
         binding.progressBar.setIsVisible(visible)
     }
