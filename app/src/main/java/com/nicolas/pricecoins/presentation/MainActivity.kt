@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // Adicionando novo comentário.
+
     private fun priceCoinInit() {
 
         viewModel.run {
@@ -41,5 +43,4 @@ class MainActivity : AppCompatActivity() {
     private fun handleVisibility(visible: Boolean) {
         binding.progressBar.setIsVisible(visible)
     }
-
 }
