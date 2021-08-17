@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     // Adicionando novo comentário.
     // NOva linha
+    //OK
 
     private fun priceCoinInit() {
 
@@ -42,7 +43,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun adicionar(){
-
     }
 
     private fun handleVisibility(visible: Boolean) {
